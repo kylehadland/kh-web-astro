@@ -1,0 +1,28 @@
+---
+import Main from "./MainLayout.astro"
+import { Image } from "astro:assets"
+const { pageTitle, description, heroImg, frontmatter } = Astro.props
+---
+
+<Main
+    pageTitle={pageTitle || frontmatter?.title}
+    description={description || frontmatter?.description}
+>
+    <section class='bg-white rounded-md shadow-md'>
+        {
+            heroImg && (
+                <div class='relative'>
+                    <Image
+                        class='rounded-t-md object-cover w-full h-60 border-b-2 border-red-500'
+                        src={heroImg || frontmatter?.heroImg}
+                        alt={pageTitle}
+                    />
+                </div>
+            )
+        }
+
+        <div class='p-4 sm:p-6 prose max-w-none'>
+            <slot />
+        </div>
+    </section>
+</Main>

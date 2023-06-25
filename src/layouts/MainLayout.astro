@@ -1,0 +1,56 @@
+---
+import Header from "../components/Header.astro"
+const title = "KyleHadland"
+const defaultDescription =
+    "Kyle Hadland - Industrial Process Control Specialist"
+const { pageTitle, description } = Astro.props
+---
+
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
+        <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/apple-touch-icon.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/favicon-32x32.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='viewport' content='width=device-width' />
+        <meta name='generator' content={Astro.generator} />
+        <meta name='description' content={description || defaultDescription} />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;700");
+        </style>
+
+        <title>{pageTitle && pageTitle + " | "}{title}</title>
+    </head>
+    <body
+        class='font-leageSpartan text-gray-800 min-h-screen bg-gradient-to-b from-white to-gray-300 bg-fixed border-t-4 border-red-600'
+    >
+        <div class='flex flex-col sm:flex-row sm:pt-8'>
+            <header class='w-full sm:w-2/5 sm:flex-shrink sm:max-w-sm pb-0 p-6'>
+                <Header title={title} />
+            </header>
+
+            <main class='flex-auto sm:w-3/5 mb-6 mx-2 sm:mr-6'>
+                <!-- <h1>{pageTitle}</h1> -->
+                <!-- <section class='bg-white rounded-md p-4 sm:p-6 shadow-md'> -->
+                <slot />
+                <!-- </section> -->
+            </main>
+        </div>
+    </body>
+</html>

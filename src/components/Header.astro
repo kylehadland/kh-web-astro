@@ -1,0 +1,49 @@
+---
+import logo from "/src/assets/KyleHadland-Logo.png"
+import { Image } from "astro:assets"
+const { title } = Astro.props
+const navLinks = [
+    {
+        href: "/",
+        name: "Home",
+    },
+    {
+        href: "/resume",
+        name: "Resume",
+    },
+]
+const introText =
+    "Industrial Control Systems all-rounder from Melbourne, Australia"
+import CreditText from "./CreditText.astro"
+---
+
+<div class='flex flex-col sm:space-x-4'>
+    <h1 class='font-seaweed font-thin text-2xl mx-auto sm:mx-4'>
+        <!-- <a href='/'><img src='/KyleHadland-Logo.png' alt={title} /></a> -->
+        <a href='/'><Image src={logo} alt={title} /></a>
+    </h1>
+
+    <nav
+        class='font-bold uppercase grid grid-cols-2 sm:grid-cols-1 gap-1 mt-3 sm:mt-6 text-center text-xl sm:text-right sm:pr-4'
+    >
+        {
+            navLinks.map((item) => (
+                <a class='p-1 block hover:opacity-75' href={item.href}>
+                    {item.name}
+                </a>
+            ))
+        }
+    </nav>
+
+    <p
+        class='my-4 sm:m-4 text-center sm:text-left text-base italic text-gray-600'
+    >
+        {introText}
+    </p>
+
+    <CreditText />
+    <!-- <p
+        set:html={creditText}
+        class='mt-4 hidden sm:inline text-sm text-center'
+    /> -->
+</div>

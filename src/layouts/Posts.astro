@@ -1,0 +1,11 @@
+---
+import Main from "./MainLayout.astro"
+const { pageTitle, description, frontmatter } = Astro.props
+---
+
+<Main
+    pageTitle={pageTitle || frontmatter?.title}
+    description={description || frontmatter?.description}
+>
+    <slot />
+</Main>
