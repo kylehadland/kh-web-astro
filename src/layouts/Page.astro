@@ -22,6 +22,7 @@ const { pageTitle, description, heroImg, frontmatter } = Astro.props
         }
 
         <div class='p-4 sm:p-6 prose max-w-none'>
+            <h1>{pageTitle}</h1>
             <slot />
         </div>
     </section>
