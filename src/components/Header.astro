@@ -16,6 +16,7 @@ const introText =
   "Industrial Control Systems all-rounder from Melbourne, Australia"
 import Socials from "./Socials.astro"
 import CreditText from "./CreditText.astro"
+import GitBuild from "./GitBuild"
 ---
 
 <div class='flex flex-col sm:space-x-4'>
@@ -46,5 +47,8 @@ import CreditText from "./CreditText.astro"
     <Socials />
   </div>
 
+  <div class='hidden sm:flex justify-center space-x-1 mb-4 sm:my-4 text-xs'>
+    <GitBuild client:load />
+  </div>
   <!-- <CreditText /> -->
 </div>
