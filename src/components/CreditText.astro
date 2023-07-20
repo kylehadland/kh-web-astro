@@ -1,15 +1,11 @@
 ---
-import AstroWordmark from "../components/icons/astro-wordmark.astro"
-import Tailwind from "../components/icons/tailwind.astro"
+import { Icon } from "astro-icon"
 ---
 
-<!-- <p class='mt-4 hidden sm:inline text-sm text-center'>
-    Built using <a target='_blank' class='' href='https://astro.build'
-        >Astro.build</a
-    > and <a target='_blank' href='https://tailwindcss.com'>TailwindCSS</a>
-</p> -->
 <p class='mt-4 hidden sm:inline text-xs text-center'>
-    Built using <a target='_blank' class='' href='https://astro.build'
-        ><AstroWordmark /></a
-    > and <a target='_blank' href='https://tailwindcss.com'><Tailwind /></a>
+  Built using <a target='_blank' class='' href='https://astro.build'
+    ><Icon name='astro' class='max-h-5 px-1 inline' /></a
+  > and <a target='_blank' href='https://tailwindcss.com'
+    ><Icon name='tailwindcss' class='max-h-3 px-1 inline' /></a
+  >
 </p>
