@@ -1,6 +1,7 @@
 ---
 import logo from "/src/assets/KyleHadland-Logo.png"
 import { Image } from "astro:assets"
+import Socials from "./Socials.astro"
 const { title } = Astro.props
 const navLinks = [
     {
@@ -41,6 +42,9 @@ import CreditText from "./CreditText.astro"
         {introText}
     </p>
 
+    <div>
+        <Socials />
+    </div>
     <CreditText />
     <!-- <p
         set:html={creditText}
