@@ -59,7 +59,7 @@ const Destination = ({ source }) => {
           className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
           type='text'
           onChange={(e) =>
-            setDestination({ ...destination, unit: e.target.value })
+            setDestination((prev) => ({ ...prev, unit: e.target.value }))
           }
           value={destination.unit}
         />
@@ -74,7 +74,10 @@ const Destination = ({ source }) => {
           type='number'
           // inputMode='decimal'
           onChange={(e) =>
-            setDestination({ ...destination, zero: parseFloat(e.target.value) })
+            setDestination((prev) => ({
+              ...prev,
+              zero: parseFloat(e.target.value),
+            }))
           }
           value={destination.zero}
         />
@@ -92,7 +95,10 @@ const Destination = ({ source }) => {
           type='number'
           // inputMode='decimal'
           onChange={(e) =>
-            setDestination({ ...destination, span: parseFloat(e.target.value) })
+            setDestination((prev) => ({
+              ...prev,
+              span: parseFloat(e.target.value),
+            }))
           }
           value={destination.span}
         />
@@ -128,7 +134,7 @@ export default function ScaleComp() {
 
   return (
     <>
-      <section class='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
+      <section className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
         <div className='p-2 border rounded-md bg-white'>
           <h3 className='font-bold'>
             Source {source.zero} to {source.span} {source.unit}
@@ -165,7 +171,9 @@ export default function ScaleComp() {
             <input
               className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='text'
-              onChange={(e) => setSource({ ...source, unit: e.target.value })}
+              onChange={(e) =>
+                setSource((prev) => ({ ...prev, unit: e.target.value }))
+              }
               value={source.unit}
             />
           </div>
@@ -179,7 +187,10 @@ export default function ScaleComp() {
               type='number'
               // inputMode='decimal'
               onChange={(e) =>
-                setSource({ ...source, zero: parseFloat(e.target.value) })
+                setSource((prev) => ({
+                  ...prev,
+                  zero: parseFloat(e.target.value),
+                }))
               }
               value={source.zero}
             />
@@ -197,7 +208,10 @@ export default function ScaleComp() {
               type='number'
               // inputMode='decimal'
               onChange={(e) =>
-                setSource({ ...source, span: parseFloat(e.target.value) })
+                setSource((prev) => ({
+                  ...prev,
+                  span: parseFloat(e.target.value),
+                }))
               }
               value={source.span}
             />
@@ -217,7 +231,7 @@ export default function ScaleComp() {
                 const str = e.target.value
                 if (str.charAt(str.length - 1) === ".") return
                 // if (str.charAt(0) === "-" && str.length == 1) return
-                setSource({ ...source, value: parseFloat(str) })
+                setSource((prev) => ({ ...prev, value: parseFloat(str) }))
               }}
               value={source.value}
               // min={source.zero}
