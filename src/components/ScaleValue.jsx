@@ -28,7 +28,7 @@ const Destination = ({ source }) => {
         Destination {destination.zero} to {destination.span} {destination.unit}
       </h3>
 
-      <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+      <div className='flex border border-gray-200 rounded-lg my-1 '>
         <select
           className='p-2 grow rounded-lg'
           onChange={(e) =>
@@ -51,12 +51,12 @@ const Destination = ({ source }) => {
         </select>
       </div>
 
-      <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+      <div className='flex border border-gray-200 rounded-lg my-1 '>
         <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
           Unit
         </span>
         <input
-          className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0'
+          className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
           type='text'
           onChange={(e) =>
             setDestination({ ...destination, unit: e.target.value })
@@ -65,13 +65,14 @@ const Destination = ({ source }) => {
         />
       </div>
 
-      <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+      <div className='flex border border-gray-200 rounded-lg my-1'>
         <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
           Zero
         </span>
         <input
-          className='rounded-none bg-white py-1 px-2 grow shrink min-w-0'
+          className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
           type='number'
+          inputMode='numeric'
           onChange={(e) =>
             setDestination({ ...destination, zero: parseFloat(e.target.value) })
           }
@@ -82,12 +83,12 @@ const Destination = ({ source }) => {
         </span>
       </div>
 
-      <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+      <div className='flex border border-gray-200 rounded-lg my-1'>
         <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
           Span
         </span>
         <input
-          className='rounded-none bg-white py-1 px-2 grow shrink min-w-0'
+          className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
           type='number'
           onChange={(e) =>
             setDestination({ ...destination, span: parseFloat(e.target.value) })
@@ -99,11 +100,11 @@ const Destination = ({ source }) => {
         </span>
       </div>
 
-      <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+      <div className='flex border border-gray-200 rounded-lg my-1'>
         <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
           Value
         </span>
-        <span className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 font-bold'>
+        <span className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 font-bold z-10'>
           {destination.value}
         </span>
         <span className='rounded-r-lg bg-gray-100 py-1 px-2 basis-16'>
@@ -132,7 +133,7 @@ export default function ScaleComp() {
             Source {source.zero} to {source.span} {source.unit}
           </h3>
 
-          <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+          <div className='flex border border-gray-200 rounded-lg my-1'>
             <select
               className='p-2 grow rounded-lg'
               onChange={(e) =>
@@ -156,25 +157,26 @@ export default function ScaleComp() {
             </select>
           </div>
 
-          <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+          <div className='flex border border-gray-200 rounded-lg my-1'>
             <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
               Unit
             </span>
             <input
-              className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0'
+              className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='text'
               onChange={(e) => setSource({ ...source, unit: e.target.value })}
               value={source.unit}
             />
           </div>
 
-          <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+          <div className='flex border border-gray-200 rounded-lg my-1'>
             <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
               Zero
             </span>
             <input
-              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0'
+              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
+              inputMode='numeric'
               onChange={(e) =>
                 setSource({ ...source, zero: parseFloat(e.target.value) })
               }
@@ -185,13 +187,14 @@ export default function ScaleComp() {
             </span>
           </div>
 
-          <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+          <div className='flex border border-gray-200 rounded-lg my-1'>
             <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
               Span
             </span>
             <input
-              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0'
+              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
+              inputMode='numeric'
               onChange={(e) =>
                 setSource({ ...source, span: parseFloat(e.target.value) })
               }
@@ -202,13 +205,14 @@ export default function ScaleComp() {
             </span>
           </div>
 
-          <div className='flex border border-gray-200 rounded-lg my-1 text-sm'>
+          <div className='flex border border-gray-200 rounded-lg my-1'>
             <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
               Value
             </span>
             <input
-              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0'
+              className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
+              inputMode='numeric'
               onChange={(e) =>
                 setSource({ ...source, value: parseFloat(e.target.value) })
               }
