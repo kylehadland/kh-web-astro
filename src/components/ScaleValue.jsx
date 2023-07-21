@@ -118,10 +118,10 @@ const Destination = ({ source }) => {
 
 export default function ScaleComp() {
   const [source, setSource] = useState({
-    zero: 4,
-    span: 20,
+    zero: 4.0,
+    span: 20.0,
     unit: "mA",
-    value: 4,
+    value: 4.0,
   })
 
   const [destQty, setDestQty] = useState(1)
@@ -212,10 +212,10 @@ export default function ScaleComp() {
             </span>
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
-              type='text'
-              pattern='[-]?[0-9]*[.,]?[0-9]*'
+              type='number'
+              // pattern='[-]?[0-9]*[.,]?[0-9]*'
               // step={0.1}
-              inputMode='decimal'
+              // inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, value: parseFloat(e.target.value) })
               }
