@@ -1,9 +1,9 @@
 ---
-import ScaleComponent from "../components/Scale.jsx"
-import Page from "../layouts/Page.astro"
+import ScaleComp from "../components/ScaleValue.jsx"
+// import Page from "../layouts/Page.astro"
 import Post from "../layouts/Posts.astro"
 ---
 
 <Post title='scale'>
-    <ScaleComponent client:only='react' />
+  <ScaleComp client:load />
 </Post>
