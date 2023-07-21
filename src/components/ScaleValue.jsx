@@ -213,15 +213,15 @@ export default function ScaleComp() {
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
-              // pattern='[-]?[0-9]*[.,]?[0-9]*'
-              step='0.01'
-              // inputMode='decimal'
-              onChange={(e) =>
-                setSource({ ...source, value: parseFloat(e.target.value) })
-              }
+              onChange={(e) => {
+                const str = e.target.value
+                if (str.charAt(str.length - 1) === ".") return
+                // if (str.charAt(0) === "-" && str.length == 1) return
+                setSource({ ...source, value: parseFloat(str) })
+              }}
               value={source.value}
-              min={source.zero}
-              max={source.span}
+              // min={source.zero}
+              // max={source.span}
             />
             <span className='rounded-r-lg bg-gray-100 py-1 px-2 basis-16'>
               {source.unit}
