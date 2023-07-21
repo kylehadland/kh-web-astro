@@ -72,7 +72,7 @@ const Destination = ({ source }) => {
         <input
           className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
           type='number'
-          inputMode='numeric'
+          inputMode='decimal'
           onChange={(e) =>
             setDestination({ ...destination, zero: parseFloat(e.target.value) })
           }
@@ -176,7 +176,7 @@ export default function ScaleComp() {
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
-              inputMode='numeric'
+              inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, zero: parseFloat(e.target.value) })
               }
@@ -194,7 +194,7 @@ export default function ScaleComp() {
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
-              inputMode='numeric'
+              inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, span: parseFloat(e.target.value) })
               }
@@ -212,7 +212,7 @@ export default function ScaleComp() {
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
-              inputMode='numeric'
+              inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, value: parseFloat(e.target.value) })
               }
