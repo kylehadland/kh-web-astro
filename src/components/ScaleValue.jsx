@@ -214,7 +214,7 @@ export default function ScaleComp() {
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
               type='number'
               // pattern='[-]?[0-9]*[.,]?[0-9]*'
-              // step={0.1}
+              step='0.01'
               // inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, value: parseFloat(e.target.value) })
