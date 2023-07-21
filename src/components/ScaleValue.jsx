@@ -212,9 +212,10 @@ export default function ScaleComp() {
             </span>
             <input
               className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
-              type='number'
-              step={0.1}
-              // inputMode='decimal'
+              type='text'
+              pattern='[-]?[0-9]*[.,]?[0-9]*'
+              // step={0.1}
+              inputMode='decimal'
               onChange={(e) =>
                 setSource({ ...source, value: parseFloat(e.target.value) })
               }
