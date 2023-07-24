@@ -9,20 +9,20 @@ const allBlogPosts = await getCollection(collection)
 ---
 
 <Posts>
-	<section class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
-		{
-			allBlogPosts
-				.sort((a, b) => {
-					return a.data.date - b.data.date
-				})
-				.map((post) => (
-					<Card
-						title={post.data.title}
-						url={`/${collection}/${post.slug}`}
-						excerpt={post.data.description}
-						heroImg={post.data.heroImg}
-					/>
-				))
-		}
-	</section>
+  <section class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
+    {
+      allBlogPosts
+        .sort((a: any, b: any) => {
+          return b.data.date - a.data.date
+        })
+        .map((post) => (
+          <Card
+            title={post.data.title}
+            url={`/${collection}/${post.slug}`}
+            excerpt={post.data.description}
+            heroImg={post.data.heroImg}
+          />
+        ))
+    }
+  </section>
 </Posts>
