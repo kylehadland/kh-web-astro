@@ -22,8 +22,7 @@ const Destination = ({ source }) => {
   }, [source, destination.zero, destination.span, destination.unit])
 
   return (
-    // <div className='p-2 border rounded-md bg-white'>
-    <>
+    <div>
       <h3 className='font-bold'>
         Destination {destination.zero} to {destination.span} {destination.unit}
       </h3>
@@ -118,7 +117,7 @@ const Destination = ({ source }) => {
           {destination.unit}
         </span>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -243,11 +242,13 @@ export default function ScaleComp() {
           </div>
         </div>
 
-        {[...Array(destQty)].map((value, index) => (
-          <div className='p-2 border rounded-md bg-white'>
-            <Destination source={source} key={index} />
-          </div>
-        ))}
+        {[...Array(destQty)].map((value, index) => {
+          return (
+            <div key={index} className='p-2 border rounded-md bg-white'>
+              <Destination source={source} />
+            </div>
+          )
+        })}
 
         <button
           className='p-2 rounded-md w-full my-2 bg-gray-400 hover:bg-gray-500 text-white'
