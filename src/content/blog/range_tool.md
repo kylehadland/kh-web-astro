@@ -5,6 +5,7 @@ date: 2023-07-21
 description: A simple range converter, perfect for industrial applications.
 tags: [react, tool, converter]
 heroImg: ../../assets/osman-koycu-DdxfliQ5ap8-unsplash.jpg
+heroImgCredit: Photo by <a href="https://unsplash.com/@osmank?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Osman Köycü</a> on <a href="https://unsplash.com/photos/DdxfliQ5ap8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
 Quite often I find myself needing to convert a value from one range of units to another. In many cases this is a simple calculation however when the ranges are between odd values it can get a little more complicated.

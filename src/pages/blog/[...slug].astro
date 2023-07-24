@@ -2,29 +2,25 @@
 import Page from "../../layouts/Page.astro"
 import { getCollection } from "astro:content"
 export async function getStaticPaths() {
-    const blogEntries = await getCollection("blog")
-    return blogEntries.map((entry) => ({
-        params: { slug: entry.slug },
-        props: { entry },
-    }))
+  const blogEntries = await getCollection("blog")
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
 }
 const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
 <Page
-    pageTitle={entry.data.title}
-    description={entry.data.description}
-    heroImg={entry.data.heroImg}
+  pageTitle={entry.data.title}
+  description={entry.data.description}
+  heroImg={entry.data.heroImg}
+  heroImgCredit={entry.data.heroImgCredit}
 >
-    <!-- <h3>{entry.data.title}</h3> -->
-
-    <article
-        class='max-w-none prose prose-img:mx-auto prose-img:border-white prose-img:border-8 prose-img:shadow-md'
-    >
-        <!-- <article
-        class='max-w-none prose prose-headings:border-b-[1px] prose-headings:my-1 prose-img:mx-auto prose-img:border-white prose-img:border-8 prose-img:shadow-md'
-    > -->
-        <Content />
-    </article>
+  <article
+    class='max-w-none prose prose-img:mx-auto prose-img:border-white prose-img:border-8 prose-img:shadow-md'
+  >
+    <Content />
+  </article>
 </Page>
