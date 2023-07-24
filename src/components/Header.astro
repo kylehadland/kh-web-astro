@@ -23,7 +23,13 @@ import CreditText from "./CreditText.astro"
 import GitBuild from "./GitBuild"
 ---
 
-<div class='flex flex-col sm:space-x-4'>
+<div
+  id='header-fixed'
+  class='hidden fixed top-0 left-0 h-auto w-full bg-gray-200 z-50 p-1 shadow-md'
+>
+  <a href='/'><Image class='mx-auto' src={logo} alt={title} height={30} /></a>
+</div>
+<div class='flex flex-col sm:space-x-4' id='header'>
   <h1 class='font-seaweed font-thin text-2xl mx-auto sm:mx-4'>
     <!-- <a href='/'><img src='/KyleHadland-Logo.png' alt={title} /></a> -->
     <a href='/'><Image src={logo} alt={title} /></a>
@@ -56,3 +62,21 @@ import GitBuild from "./GitBuild"
   </div>
   <!-- <CreditText /> -->
 </div>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // const intersecting = entry.isIntersecting
+        const almostGone = entry.intersectionRatio > 0.2 ? true : false
+        if (almostGone) {
+          document.getElementById("header-fixed").classList.add("hidden")
+        } else {
+          document.getElementById("header-fixed").classList.remove("hidden")
+        }
+      })
+    },
+    { threshold: [0.2] }
+  )
+  observer.observe(document.getElementById("header"))
+</script>

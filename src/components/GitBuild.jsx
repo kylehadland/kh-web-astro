@@ -2,9 +2,10 @@ import { Octokit } from "@octokit/core"
 import { useState, useEffect } from "react"
 
 export default function GitBuild() {
-  const octokit = new Octokit({
-    auth: import.meta.env.SECRET_GH,
-  })
+  // const octokit = new Octokit({
+  //   auth: import.meta.env.SECRET_GH,
+  // })
+  const octokit = new Octokit()
 
   const [buildDate, setBuildDate] = useState(null)
 
@@ -29,5 +30,5 @@ export default function GitBuild() {
   }, [])
 
   if (!buildDate) return "Getting GitHub build date..."
-  return <p>Updated: {buildDate}</p>
+  return <>Updated: {buildDate}</>
 }
