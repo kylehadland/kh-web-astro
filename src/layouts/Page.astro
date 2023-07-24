@@ -1,7 +1,8 @@
 ---
 import Main from "./MainLayout.astro"
 import { Image } from "astro:assets"
-const { pageTitle, description, heroImg, frontmatter } = Astro.props
+const { pageTitle, description, heroImg, heroImgCredit, frontmatter } =
+  Astro.props
 ---
 
 <Main
@@ -17,6 +18,10 @@ const { pageTitle, description, heroImg, frontmatter } = Astro.props
             src={heroImg || frontmatter?.heroImg}
             alt={pageTitle}
             width={600}
+          />
+          <div
+            class='text-xs italic text-center m-1 text-gray-400'
+            set:html={heroImgCredit}
           />
         </div>
       )

@@ -1,8 +1,5 @@
 import { z, defineCollection } from "astro:content"
 
-// const blogCollection = defineCollection({
-//   type: "content",
-// })
 const blogCollection = defineCollection({
   type: "content",
   schema: ({ image }) =>
@@ -11,6 +8,7 @@ const blogCollection = defineCollection({
       date: z.date(),
       description: z.string().optional(),
       heroImg: image().optional(),
+      heroImgCredit: z.string().optional(),
     }),
 })
 
