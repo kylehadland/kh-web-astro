@@ -15,14 +15,18 @@ const allBlogPosts = await getCollection(collection)
         .sort((a: any, b: any) => {
           return b.data.date - a.data.date
         })
-        .map((post) => (
-          <Card
-            title={post.data.title}
-            url={`/${collection}/${post.slug}`}
-            excerpt={post.data.description}
-            heroImg={post.data.heroImg}
-          />
-        ))
+        .map((post) => {
+          return (
+            <Card
+              title={post.data.title}
+              url={`/${collection}/${post.slug}`}
+              excerpt={post.data.description}
+              heroImg={post.data.heroImg}
+              date={post.data.date}
+              tags={post.data.tags}
+            />
+          )
+        })
     }
   </section>
 </Posts>
