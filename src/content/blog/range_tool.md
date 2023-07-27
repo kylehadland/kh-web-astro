@@ -30,8 +30,9 @@ Sometimes you may need to do multiple conversions on the same source value. I've
 ### Limitations
 
 - Only a few starter items have been added to the select.
-- Refresh the page and your changes will be lost, I'll add some session storage when time permits.
+- On iOS devices - to input a value with a decimal point, enter the number without the point, then go back and add the point where it should go.
+- Refresh the page and your changes will be lost, I'll add some local storage when time permits. - **Update, added this functionality 26/07/23**
 
 ### Tech notes
 
-This functionality was added using React within Astro. Sounds complicated, really isn't and is a credit to the team at Astro, check it out here [Astro Framework Components](https://docs.astro.build/en/core-concepts/framework-components/).
+This functionality was added using a React component within Astro. Sounds complicated, really isn't and is a credit to the team at Astro, check it out here [Astro Framework Components](https://docs.astro.build/en/core-concepts/framework-components/).
