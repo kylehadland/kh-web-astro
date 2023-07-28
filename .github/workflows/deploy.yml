@@ -12,9 +12,7 @@ permissions:
 
 jobs:
   build:
-    env:
-      PUBLIC_TEST: ${{ secrets.PUBLIC_TEST }}
-      SECRET_TEST: ${{ secrets.SECRET_TEST }}
+    # env:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git

@@ -1,6 +1,18 @@
+import { useForm, ValidationError } from "@formspree/react"
+
 export default function ContactForm() {
+  const [state, handleSubmit] = useForm("xgejovel")
+
+  if (state.errors.length > 0) {
+    console.log(state.errors)
+  }
+
+  if (state.succeeded) {
+    return <p className=''>Thankyou for your message.</p>
+  }
+
   return (
-    <form onSubmit={submit} className='flex flex-col'>
+    <form onSubmit={handleSubmit} className='flex flex-col'>
       <label className='flex flex-col mb-2'>
         Name
         <input
@@ -33,13 +45,17 @@ export default function ContactForm() {
       <button
         className='p-2 rounded-md w-full my-2 bg-gray-400 hover:bg-gray-500 text-white'
         type='submit'
-        disabled={isSending ? true : false}
+        disabled={state.submitting}
       >
-        <span className={isSending ? "animate-pulse" : ""}>
-          {isSending ? "Sending..." : "Send Message"}
+        <span className={state.submitting ? "animate-pulse" : ""}>
+          {state.submitting ? "Sending..." : "Send Message"}
         </span>
       </button>
-      <p className='m-2'>{responseMessage}</p>
+      {state.errors.length > 0 && (
+        <p className='m-2 text-red-500'>
+          Error submitting message, please try again.
+        </p>
+      )}
     </form>
   )
 }
