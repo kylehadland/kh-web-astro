@@ -29,13 +29,13 @@ import GitBuild from "./GitBuild"
 
 <div
   id='header-fixed'
-  class='hidden fixed top-0 left-0 h-auto w-full bg-gray-200 z-50 p-1 shadow-md'
+  class='fixed top-0 left-0 h-auto w-full bg-gray-200 z-50 p-1 shadow-md -translate-y-full transition-transform duration-300 ease-in-out'
 >
   <a href='/'><Image class='mx-auto' src={logo} alt={title} height={30} /></a>
 </div>
+
 <div class='flex flex-col sm:space-x-4' id='header'>
   <h1 class='font-seaweed font-thin text-2xl mx-auto sm:mx-4'>
-    <!-- <a href='/'><img src='/KyleHadland-Logo.png' alt={title} /></a> -->
     <a href='/'><Image src={logo} alt={title} /></a>
   </h1>
 
@@ -72,11 +72,16 @@ import GitBuild from "./GitBuild"
     (entries) => {
       entries.forEach((entry) => {
         // const intersecting = entry.isIntersecting
-        const almostGone = entry.intersectionRatio > 0.2 ? true : false
+        const almostGone = entry.intersectionRatio > 0.2
         if (almostGone) {
-          document.getElementById("header-fixed").classList.add("hidden")
+          document
+            .getElementById("header-fixed")
+            .classList.add("-translate-y-full")
         } else {
-          document.getElementById("header-fixed").classList.remove("hidden")
+          document
+            .getElementById("header-fixed")
+            .classList.remove("-translate-y-full")
+          document.getElementById("header-fixed").classList.add("translate-y-0")
         }
       })
     },
