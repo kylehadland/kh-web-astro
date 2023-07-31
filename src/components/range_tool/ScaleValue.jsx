@@ -69,13 +69,14 @@ export default function ScaleComp() {
                 destination={destination}
                 remove={removeDestination}
                 edit={editDestination}
+                index={index}
               />
             </div>
           )
         })}
 
         <button
-          className='p-2 rounded-md w-full my-2 bg-gray-400 hover:bg-gray-500 text-white'
+          className='p-2 rounded-md w-full my-2 bg-gray-500 hover:bg-gray-600 text-white'
           onClick={addDestination}
         >
           Add another
