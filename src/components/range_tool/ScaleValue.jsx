@@ -30,7 +30,6 @@ export default function ScaleComp() {
   }
 
   const [source, setSource] = useLocalStorage("sourceData", sourceDefault)
-  const [destQty, setDestQty] = useLocalStorage("destQty", 1)
 
   const [destination, setDestination] = useLocalStorage("destinationData", [
     destinationDefault,
