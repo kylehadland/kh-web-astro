@@ -9,7 +9,11 @@ export default function SourceForm({ source, setSource }) {
         </h3>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
+          <label for='sourceSelect' className='hidden'>
+            Quick Select
+          </label>
           <select
+            id='sourceSelect'
             className='p-2 grow rounded-lg'
             onChange={(e) =>
               setSource({
@@ -33,10 +37,14 @@ export default function SourceForm({ source, setSource }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for='sourceUnit'
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Unit
-          </span>
+          </label>
           <input
+            id='sourceUnit'
             className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='text'
             onChange={(e) =>
@@ -47,10 +55,14 @@ export default function SourceForm({ source, setSource }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for='sourceZero'
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Zero
-          </span>
+          </label>
           <input
+            id='sourceZero'
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='number'
             // inputMode='decimal'
@@ -68,10 +80,14 @@ export default function SourceForm({ source, setSource }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for='sourceSpan'
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Span
-          </span>
+          </label>
           <input
+            id='sourceSpan'
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='number'
             // inputMode='decimal'
@@ -89,10 +105,14 @@ export default function SourceForm({ source, setSource }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for='sourceValue'
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Value
-          </span>
+          </label>
           <input
+            id='sourceValue'
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='number'
             onChange={(e) => {

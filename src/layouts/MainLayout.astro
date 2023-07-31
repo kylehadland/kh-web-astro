@@ -2,71 +2,55 @@
 import Header from "../components/Header.astro"
 const title = "KyleHadland"
 const defaultDescription =
-    "Kyle Hadland - Industrial Process Control Specialist"
+  "Kyle Hadland - Industrial Process Control Specialist"
 const { pageTitle, description } = Astro.props
 ---
 
 <html lang='en'>
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src='https://www.googletagmanager.com/gtag/js?id=G-ZMEY4B7290'
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-                dataLayer.push(arguments)
-            }
-            gtag("js", new Date())
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-ZMEY4B7290'
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
 
-            gtag("config", "G-ZMEY4B7290")
-        </script>
+      gtag("config", "G-ZMEY4B7290")
+    </script>
 
-        <meta charset='utf-8' />
-        <link
-            rel='apple-touch-icon'
-            sizes='180x180'
-            href='/apple-touch-icon.png'
-        />
-        <link
-            rel='icon'
-            type='image/png'
-            sizes='32x32'
-            href='/favicon-32x32.png'
-        />
-        <link
-            rel='icon'
-            type='image/png'
-            sizes='16x16'
-            href='/favicon-16x16.png'
-        />
-        <link rel='manifest' href='/site.webmanifest' />
-        <meta name='viewport' content='width=device-width' />
-        <meta name='generator' content={Astro.generator} />
-        <meta name='description' content={description || defaultDescription} />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;700");
-        </style>
+    <meta charset='utf-8' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='manifest' href='/site.webmanifest' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description || defaultDescription} />
+    <link rel='preconnect' href='https://fonts.gstatic.com' />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;700&display=swap");
+    </style>
 
-        <title>{pageTitle && pageTitle + " | "}{title}</title>
-    </head>
-    <body
-        class='font-leageSpartan text-gray-800 min-h-screen bg-gradient-to-b from-white to-gray-300 bg-fixed'
-    >
-        <hr class='h-[4px] w-full bg-red-600 fixed border-none' />
+    <title>{pageTitle && pageTitle + " | "}{title}</title>
+  </head>
+  <body
+    class='font-leageSpartan text-gray-800 min-h-screen bg-gradient-to-b from-white to-gray-300 bg-fixed'
+  >
+    <hr class='h-[4px] w-full bg-red-600 fixed border-none' />
 
-        <div class='flex flex-col sm:flex-row sm:pt-8'>
-            <header
-                class='w-full sm:w-2/5 sm:flex-shrink sm:max-w-sm pb-0 p-6 sm:sticky top-8 h-fit'
-            >
-                <Header title={title} />
-            </header>
+    <div class='flex flex-col sm:flex-row sm:pt-8'>
+      <header
+        class='w-full sm:w-2/5 sm:flex-shrink sm:max-w-sm pb-0 p-6 sm:sticky top-8 h-fit'
+      >
+        <Header title={title} />
+      </header>
 
-            <main class='flex-auto sm:w-3/5 mb-6 mx-2 sm:mr-6'>
-                <slot />
-            </main>
-        </div>
-    </body>
+      <main class='flex-auto sm:w-3/5 mb-6 mx-2 sm:mr-6'>
+        <slot />
+      </main>
+    </div>
+  </body>
 </html>

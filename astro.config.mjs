@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config"
 import tailwind from "@astrojs/tailwind"
-
 import react from "@astrojs/react"
+import Sitemap from "vite-plugin-sitemap"
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,4 +11,7 @@ export default defineConfig({
     assets: true,
   },
   integrations: [tailwind(), react()],
+  vite: {
+    plugins: [Sitemap()],
+  },
 })

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ranges from "./ranges"
 
-export default function DestForm({ source, destination, remove, edit }) {
+export default function DestForm({ source, destination, remove, edit, index }) {
   const [value, setValue] = useState()
 
   useEffect(() => {
@@ -34,7 +34,11 @@ export default function DestForm({ source, destination, remove, edit }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1 '>
+          <label for={`destSelect${index}`} className='hidden'>
+            Quick Select
+          </label>
           <select
+            id={`destSelect${index}`}
             className='p-2 grow rounded-lg'
             onChange={(e) => edit(destination, { ...ranges[e.target.value] })}
             defaultValue=''
@@ -53,10 +57,14 @@ export default function DestForm({ source, destination, remove, edit }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1 '>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for={`destUnit${index}`}
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Unit
-          </span>
+          </label>
           <input
+            id={`destUnit${index}`}
             className='rounded-r-lg bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='text'
             onChange={(e) => edit(destination, { unit: e.target.value })}
@@ -65,10 +73,14 @@ export default function DestForm({ source, destination, remove, edit }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <span
+            for={`destZero${index}`}
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Zero
           </span>
           <input
+            id={`destZero${index}`}
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='number'
             // inputMode='decimal'
@@ -83,10 +95,14 @@ export default function DestForm({ source, destination, remove, edit }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'>
+          <label
+            for={`destSpan${index}`}
+            className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
+          >
             Span
-          </span>
+          </label>
           <input
+            id={`destSpan${index}`}
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'
             type='number'
             // inputMode='decimal'

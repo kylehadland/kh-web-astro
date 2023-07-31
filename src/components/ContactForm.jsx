@@ -13,7 +13,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className='flex flex-col'>
-      <label className='flex flex-col mb-2'>
+      <label for='name' className='flex flex-col mb-2'>
         Name
         <input
           className='rounded-lg bg-white border py-1 px-2 hover:border-red-400 focus:outline-none focus:border-red-400'
@@ -23,7 +23,7 @@ export default function ContactForm() {
           required
         />
       </label>
-      <label className='flex flex-col mb-2'>
+      <label for='email' className='flex flex-col mb-2'>
         Email
         <input
           className='rounded-lg bg-white border py-1 px-2 hover:border-red-400 focus:outline-none focus:border-red-400'
@@ -33,7 +33,7 @@ export default function ContactForm() {
           required
         />
       </label>
-      <label className='flex flex-col mb-2'>
+      <label for='message' className='flex flex-col mb-2'>
         Message
         <textarea
           className='rounded-lg bg-white border py-1 px-2 hover:border-red-400 focus:outline-none focus:border-red-400'
