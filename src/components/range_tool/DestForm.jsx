@@ -20,10 +20,10 @@ export default function DestForm({ source, destination, remove, edit, index }) {
     <>
       <div>
         <div className='flex justify-between'>
-          <h3 className='font-bold'>
+          <h2 className='font-bold'>
             Destination {destination.zero} to {destination.span}{" "}
             {destination.unit}
-          </h3>
+          </h2>
           <button
             title='Remove'
             className='p-1'
@@ -73,12 +73,12 @@ export default function DestForm({ source, destination, remove, edit, index }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <span
+          <label
             for={`destZero${index}`}
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Zero
-          </span>
+          </label>
           <input
             id={`destZero${index}`}
             className='rounded-none bg-white py-1 px-2 grow shrink min-w-0 z-10'

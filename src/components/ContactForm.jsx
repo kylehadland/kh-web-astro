@@ -43,7 +43,7 @@ export default function ContactForm() {
         />
       </label>
       <button
-        className='p-2 rounded-md w-full my-2 bg-gray-400 hover:bg-gray-500 text-white'
+        className='p-2 rounded-md w-full my-2 bg-gray-500 hover:bg-gray-600 text-white'
         type='submit'
         disabled={state.submitting}
       >
