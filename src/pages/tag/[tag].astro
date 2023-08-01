@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content"
+const collection = "blog"
+import Card from "../../components/Card.astro"
+import Posts from "../../layouts/Posts.astro"
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog")
+  const allTags: string[] = []
+  blogEntries.map((entry) => {
+    entry.data.tags.forEach((tag) => allTags.push(tag))
+  })
+  const allTagsUnique = [...new Set(allTags)]
+
+  return allTagsUnique.map((tag) => ({
+    params: { tag: tag },
+    props: { entry: blogEntries },
+  }))
+}
+
+const { tag } = Astro.params
+const allBlogPosts = await getCollection("blog", ({ data }) => {
+  return data.tags.includes(tag)
+})
+---
+
+<Posts pageTitle={`Tagged ${tag}`}>
+  <h1 class='text-3xl font-bold mb-2'>Posts tagged "{tag}"</h1>
+  <section class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
+    {
+      allBlogPosts
+        .sort((a: any, b: any) => {
+          return b.data.date - a.data.date
+        })
+        .map((post) => {
+          return (
+            <Card
+              title={post.data.title}
+              url={`/${collection}/${post.slug}`}
+              excerpt={post.data.description}
+              heroImg={post.data.heroImg}
+              date={post.data.date}
+              tags={post.data.tags}
+            />
+          )
+        })
+    }
+  </section>
+</Posts>

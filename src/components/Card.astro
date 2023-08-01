@@ -3,7 +3,9 @@ const { title, url, excerpt, heroImg, date, tags } = Astro.props
 import { Image } from "astro:assets"
 ---
 
-<article class='shadow-md w-full rounded-md bg-white flex flex-col justify-between'>
+<article
+  class='shadow-md w-full rounded-md bg-white flex flex-col justify-between'
+>
   {
     heroImg && (
       <div class='relative'>
@@ -25,10 +27,21 @@ import { Image } from "astro:assets"
     <p class='text-right text-red-600'><a href={url}>Read more...</a></p>
   </div>
 
-  <div class='text-xs border-t border-b border-gray-400 text-gray-500 mx-2 mb-3 p-1 py-2'>
+  <div
+    class='text-xs border-t border-b border-gray-400 text-gray-500 mx-2 mb-3 p-1 py-2'
+  >
     {date && <p>Published: {date.toDateString()}</p>}
-    {tags && 
-    <p>Tags: {tags.map((tag) => (<span class='pr-1'>{tag}</span>))}</p>
+    {
+      tags && (
+        <p>
+          Tags:{" "}
+          {tags.map((tag) => (
+            <a class='pr-1' href={`/tag/${tag}`}>
+              {tag}
+            </a>
+          ))}
+        </p>
+      )
     }
   </div>
 </article>
