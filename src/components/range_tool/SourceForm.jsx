@@ -4,9 +4,9 @@ export default function SourceForm({ source, setSource }) {
   return (
     <>
       <div className='p-2 border rounded-md bg-white'>
-        <h3 className='font-bold'>
+        <h2 className='font-bold'>
           Source {source.zero} to {source.span} {source.unit}
-        </h3>
+        </h2>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label for='sourceSelect' className='hidden'>
