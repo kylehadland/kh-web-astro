@@ -14,4 +14,7 @@ export default defineConfig({
   vite: {
     plugins: [Sitemap()],
   },
+  build: {
+    inlineStylesheets: "auto",
+  },
 })
