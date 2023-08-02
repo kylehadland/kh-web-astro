@@ -9,6 +9,8 @@ export async function getStaticPaths() {
   }))
 }
 const { entry } = Astro.props
+const { date, tags } = entry.data
+
 const { Content } = await entry.render()
 ---
 
@@ -18,6 +20,24 @@ const { Content } = await entry.render()
   heroImg={entry.data.heroImg}
   heroImgCredit={entry.data.heroImgCredit}
 >
+  <div
+    class='text-xs border-t border-b border-gray-400 text-gray-500 mb-5 pb-2 flex justify-between -mt-4'
+  >
+    {date && <p>Published: {date.toDateString()}</p>}
+    {
+      tags && (
+        <p>
+          Tags:{" "}
+          {tags.map((tag: String) => (
+            <a class='no-underline' href={`/tag/${tag}`}>
+              {tag}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+
   <article
     class='max-w-none prose prose-img:mx-auto prose-img:border-white prose-img:border-8 prose-img:shadow-md'
   >
