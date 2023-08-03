@@ -21,8 +21,13 @@ const ranges = [
   },
   {
     zero: 0,
-    span: 100,
+    span: 1000,
     unit: "kPa",
+  },
+  {
+    zero: 0,
+    span: 145.038,
+    unit: "psi",
   },
 ]
 

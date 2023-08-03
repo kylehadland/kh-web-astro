@@ -26,7 +26,6 @@ export default function ScaleComp() {
     zero: 0,
     span: 100,
     unit: "%",
-    value: 0,
   }
 
   const [source, setSource] = useLocalStorage("sourceData", sourceDefault)

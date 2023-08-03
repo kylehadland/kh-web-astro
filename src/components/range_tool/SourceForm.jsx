@@ -9,7 +9,7 @@ export default function SourceForm({ source, setSource }) {
         </h2>
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
-          <label for='sourceSelect' className='hidden'>
+          <label htmlFor='sourceSelect' className='hidden'>
             Quick Select
           </label>
           <select
@@ -38,7 +38,7 @@ export default function SourceForm({ source, setSource }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for='sourceUnit'
+            htmlFor='sourceUnit'
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Unit
@@ -56,7 +56,7 @@ export default function SourceForm({ source, setSource }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for='sourceZero'
+            htmlFor='sourceZero'
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Zero
@@ -81,7 +81,7 @@ export default function SourceForm({ source, setSource }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for='sourceSpan'
+            htmlFor='sourceSpan'
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Span
@@ -106,7 +106,7 @@ export default function SourceForm({ source, setSource }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for='sourceValue'
+            htmlFor='sourceValue'
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Value

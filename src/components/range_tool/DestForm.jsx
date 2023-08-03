@@ -34,7 +34,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
         </div>
 
         <div className='flex border border-gray-200 rounded-lg my-1 '>
-          <label for={`destSelect${index}`} className='hidden'>
+          <label htmlFor={`destSelect${index}`} className='hidden'>
             Quick Select
           </label>
           <select
@@ -58,7 +58,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1 '>
           <label
-            for={`destUnit${index}`}
+            htmlFor={`destUnit${index}`}
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Unit
@@ -74,7 +74,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for={`destZero${index}`}
+            htmlFor={`destZero${index}`}
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Zero
@@ -96,7 +96,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
 
         <div className='flex border border-gray-200 rounded-lg my-1'>
           <label
-            for={`destSpan${index}`}
+            htmlFor={`destSpan${index}`}
             className='rounded-l-lg bg-gray-100 py-1 px-2 basis-16 text-right shrink-0'
           >
             Span
