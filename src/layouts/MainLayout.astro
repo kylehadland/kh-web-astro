@@ -4,6 +4,7 @@ const title = "KyleHadland"
 const defaultDescription =
   "Kyle Hadland - Industrial Process Control Specialist"
 const { pageTitle, description } = Astro.props
+import { ViewTransitions } from "astro:transitions"
 ---
 
 <html lang='en'>
@@ -35,6 +36,8 @@ const { pageTitle, description } = Astro.props
     </style>
 
     <title>{pageTitle && pageTitle + " | "}{title}</title>
+
+    <ViewTransitions />
   </head>
   <body
     class='font-leageSpartan text-gray-800 min-h-screen bg-gradient-to-b from-white to-gray-300 bg-fixed'

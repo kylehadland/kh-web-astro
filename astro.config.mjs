@@ -9,6 +9,7 @@ export default defineConfig({
   // base: "/kh-web-astro",
   experimental: {
     assets: true,
+    viewTransitions: true,
   },
   integrations: [tailwind(), react()],
   vite: {
