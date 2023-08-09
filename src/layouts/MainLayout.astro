@@ -39,10 +39,8 @@ import { ViewTransitions } from "astro:transitions"
 
     <ViewTransitions />
   </head>
-  <!-- <body
-    class='font-leageSpartan text-gray-800 min-h-screen bg-gradient-to-b from-white to-gray-300 bg-fixed'
-  > -->
   <body class='font-leageSpartan text-gray-800'>
+    <!-- Background in own div to fix Safari issue -->
     <div
       class='-z-10 fixed top-0 left-0 h-full w-full bg-gradient-to-b from-white to-gray-300'
     >

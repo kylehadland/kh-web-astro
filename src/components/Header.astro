@@ -25,18 +25,12 @@ const introText =
 import Socials from "./Socials.astro"
 // import CreditText from "./CreditText.astro"
 import GitBuild from "./GitBuild"
-// import FixedHeader from "./FixedHeader.astro"
 import FixedHeader from "./FixedHeader.jsx"
 const fixedImage = await getImage({ src: logo })
 ---
 
 <FixedHeader logo={fixedImage} title={title} client:only='react' />
-<!-- <div
-  id='header-fixed'
-  class='fixed top-0 left-0 h-auto w-full bg-gray-200 z-5 p-1 shadow-md -translate-y-full transition-transform duration-300 ease-in-out'
->
-  <a href='/'><Image class='mx-auto' src={logo} alt={title} height={30} /></a>
-</div> -->
+
 <div class='flex flex-col sm:space-x-4' id='header'>
   <h1 class='font-thin text-2xl mx-auto sm:mx-4'>
     <a href='/'><Image src={logo} alt={title} loading='eager' /></a>
