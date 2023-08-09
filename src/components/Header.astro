@@ -1,6 +1,6 @@
 ---
 import logo from "/src/assets/KyleHadland-Logo.png"
-import { Image } from "astro:assets"
+import { Image, getImage } from "astro:assets"
 const { title } = Astro.props
 const navLinks = [
   {
@@ -25,15 +25,18 @@ const introText =
 import Socials from "./Socials.astro"
 // import CreditText from "./CreditText.astro"
 import GitBuild from "./GitBuild"
+// import FixedHeader from "./FixedHeader.astro"
+import FixedHeader from "./FixedHeader.jsx"
+const fixedImage = await getImage({ src: logo })
 ---
 
-<div
+<FixedHeader logo={fixedImage} title={title} client:only='react' />
+<!-- <div
   id='header-fixed'
-  class='sm:hidden fixed top-0 left-0 h-auto w-full bg-gray-200 z-50 p-1 shadow-md -translate-y-full transition-transform duration-300 ease-in-out'
+  class='fixed top-0 left-0 h-auto w-full bg-gray-200 z-5 p-1 shadow-md -translate-y-full transition-transform duration-300 ease-in-out'
 >
   <a href='/'><Image class='mx-auto' src={logo} alt={title} height={30} /></a>
-</div>
-
+</div> -->
 <div class='flex flex-col sm:space-x-4' id='header'>
   <h1 class='font-thin text-2xl mx-auto sm:mx-4'>
     <a href='/'><Image src={logo} alt={title} loading='eager' /></a>
@@ -62,33 +65,7 @@ import GitBuild from "./GitBuild"
   </div>
 
   <div class='hidden sm:flex justify-center space-x-1 mb-4 sm:my-4 text-xs'>
-    <GitBuild client:load />
+    <GitBuild client:load transition:persist />
   </div>
   <!-- <CreditText /> -->
 </div>
-
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        // const intersecting = entry.isIntersecting
-        const almostGone = entry.intersectionRatio > 0.2
-        if (almostGone) {
-          document
-            .getElementById("header-fixed")
-            .classList.remove("translate-y-0")
-          document
-            .getElementById("header-fixed")
-            .classList.add("-translate-y-full")
-        } else {
-          document
-            .getElementById("header-fixed")
-            .classList.remove("-translate-y-full")
-          document.getElementById("header-fixed").classList.add("translate-y-0")
-        }
-      })
-    },
-    { threshold: [0.2] }
-  )
-  observer.observe(document.getElementById("header"))
-</script>
