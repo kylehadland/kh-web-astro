@@ -7,10 +7,10 @@ import Sitemap from "vite-plugin-sitemap"
 export default defineConfig({
   site: "https://kylehadland.com.au",
   // base: "/kh-web-astro",
-  experimental: {
-    assets: true,
-    viewTransitions: true,
-  },
+  // experimental: {
+  //   assets: true,
+  //   viewTransitions: true,
+  // },
   integrations: [tailwind(), react()],
   vite: {
     plugins: [Sitemap()],
