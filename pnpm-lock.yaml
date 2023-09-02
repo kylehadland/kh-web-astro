@@ -12,6 +12,7 @@ specifiers:
   astro-icon: ^0.8.1
   react: ^18.2.0
   react-dom: ^18.2.0
+  sharp: ^0.32.5
   tailwindcss: ^3.3.3
   vite: ^4.2.0
   vite-plugin-sitemap: ^0.4.2
@@ -27,6 +28,7 @@ dependencies:
   astro-icon: 0.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  sharp: 0.32.5
   tailwindcss: 3.3.3
 
 devDependencies:
