@@ -33,7 +33,15 @@ const fixedImage = await getImage({ src: logo })
 
 <div class='flex flex-col sm:space-x-4' id='header'>
   <h1 class='font-thin text-2xl mx-auto sm:mx-4'>
-    <a href='/'><Image src={logo} alt={title} loading='eager' /></a>
+    <a href='/'
+      ><Image
+        src={logo}
+        alt={title}
+        width={406}
+        height={96}
+        loading='eager'
+      /></a
+    >
   </h1>
 
   <nav
