@@ -33,10 +33,10 @@ import { Image } from "astro:assets"
     {date && <p>Published: {date.toDateString()}</p>}
     {
       tags && (
-        <p>
+        <p class='divide-x divide-gray-400'>
           Tags:{" "}
           {tags.map((tag) => (
-            <a class='pr-1' href={`/tag/${tag}`}>
+            <a class='px-1' href={`/tag/${tag}`}>
               {tag}
             </a>
           ))}

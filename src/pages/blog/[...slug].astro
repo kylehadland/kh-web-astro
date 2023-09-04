@@ -26,12 +26,14 @@ const { Content } = await entry.render()
     {date && <p>Published: {date.toDateString()}</p>}
     {
       tags && (
-        <p>
+        <p class='divide-x divide-black'>
           Tags:{" "}
           {tags.map((tag: String) => (
-            <a class='no-underline' href={`/tag/${tag}`}>
+            // <li>
+            <a class='px-1 no-underline' href={`/tag/${tag}`}>
               {tag}
             </a>
+            // </li>
           ))}
         </p>
       )

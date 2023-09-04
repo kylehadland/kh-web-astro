@@ -2,7 +2,6 @@
 const collection = "blog"
 import Posts from "../layouts/Posts.astro"
 import Card from "../components/Card.astro"
-// const allPosts = await Astro.glob("./*.md")
 
 import { getCollection } from "astro:content"
 const allBlogPosts = await getCollection(collection)
