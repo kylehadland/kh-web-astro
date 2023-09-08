@@ -14,6 +14,10 @@ As we all know however, life is not black and white (or light and dark). I had a
 
 This is my answer.....
 
+## Demo
+
+Demo is available here [Light Dark Color](https://ldc.kylehadland.com.au).
+
 ## References
 
 Apart from the Astro and Tailwindcss docs I also took some guidance from an article by Kevin Zuniga Cuellar:
