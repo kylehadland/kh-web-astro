@@ -16,7 +16,7 @@ const ranges = [
   },
   {
     zero: 0,
-    span: 100,
+    span: 250,
     unit: "degC",
   },
   {
@@ -28,6 +28,11 @@ const ranges = [
     zero: 0,
     span: 145.038,
     unit: "psi",
+  },
+  {
+    zero: 12800,
+    span: 64000,
+    unit: "counts",
   },
 ]
 
