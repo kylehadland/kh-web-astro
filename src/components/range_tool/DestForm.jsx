@@ -18,7 +18,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
 
   return (
     <>
-      <div>
+      <div className='min-h-60'>
         <div className='flex justify-between'>
           <h2 className='font-bold'>
             Destination {destination.zero} to {destination.span}{" "}
@@ -26,7 +26,7 @@ export default function DestForm({ source, destination, remove, edit, index }) {
           </h2>
           <button
             title='Remove'
-            className='p-1'
+            className=''
             onClick={() => remove(destination)}
           >
             X

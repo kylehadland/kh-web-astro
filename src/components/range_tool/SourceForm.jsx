@@ -3,7 +3,7 @@ import ranges from "./ranges"
 export default function SourceForm({ source, setSource }) {
   return (
     <>
-      <div className='p-2 border rounded-md bg-white'>
+      <div className='p-2 border rounded-md bg-white min-h-60'>
         <h2 className='font-bold'>
           Source {source.zero} to {source.span} {source.unit}
         </h2>

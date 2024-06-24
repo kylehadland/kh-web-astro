@@ -45,6 +45,18 @@ export default function ScaleComp() {
     setDestination(newDestination)
   }
 
+  const swapSourceDest = () => {
+    const oldDestination = { ...destination[0], value: 0 }
+    const { value, ...oldSource } = source
+
+    const newDestination = destination.map((dest, index) => {
+      return index == 0 ? oldSource : dest
+    })
+
+    setDestination(newDestination)
+    setSource(oldDestination)
+  }
+
   const editDestination = (item, change) => {
     const newDestination = destination.map((dest) => {
       if (dest == item) {
@@ -74,12 +86,20 @@ export default function ScaleComp() {
           )
         })}
 
-        <button
-          className='p-2 rounded-md w-full my-2 bg-gray-500 hover:bg-gray-600 text-white'
-          onClick={addDestination}
-        >
-          Add another
-        </button>
+        <div className='flex flex-col min-h-60'>
+          <button
+            className='p-2 grow rounded-md w-full my-2 bg-gray-500 hover:bg-gray-600 text-white'
+            onClick={addDestination}
+          >
+            Add another
+          </button>
+          <button
+            className='p-2 grow rounded-md w-full my-2 bg-gray-400 hover:bg-gray-500 text-white'
+            onClick={swapSourceDest}
+          >
+            Swap
+          </button>
+        </div>
       </section>
     </>
   )
