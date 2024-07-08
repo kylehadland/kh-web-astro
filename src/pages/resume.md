@@ -6,103 +6,72 @@ description: Kyle Hadland - Resume June 2023
 # heroImg:
 ---
 
-# Resume - June 2023
+# Resume - Apr 2024
 
-Industrial Automation all-rounder from the Yarra Valley region of Melbourne, Australia.
+Process Control Specialist from Melbourne, Australia
 
-## Key Abilities:
+## Profile
 
-**Knowledge and understanding of industrial plants and processes:**
+I am an experienced Process Control Specialist all rounder from the Yarra Valley region of Victoria, Australia.
 
-- Mining material movement
-- Gold processing, grinding and milling, oxidisation and recovery.
-- Water treatment.
-- Power generation.
+With 25+ years experience in the industry I have a broad range of skills and knowledge that provide me the tools necessary to adapt to any situation.
 
-**Control Systems:**
+In addition, I am currently studying Cert IV in Cybersecurity part time to keep my knowledge relevant to the current environment.
 
-- Foxboro DCS Specialist
-- Analog and digital control strategies
-- Experience with many PLC and HMI systems
-- Adaptable to any other systems
+## Key Abilities
 
-**Instrumentation:**
+**Primary Skills**
 
-- Calibration of various kinds of equipment.
-- Configuration and commissioning.
-- Fault finding of equipment and loops
+- Commissioning
+- Process plants
+- Control logic and schemes
+- Instrumentation
+- Programming and databases
 
-**Electrical:**
+**Systems Skills**
 
-- Interpreting and revising electrical drawings.
-- Commissioning of systems.
-- Supervision of installations.
+- Foxboro DCS expert
+- Allen Bradley PLC
+- Many other PLC
+- Ethernet networking
+- Virtualisation
+- Internet of Things
 
-**Software:**
+**Process Skills**
 
-- Document, time series and relational databases.
-- Front and back end web interfaces.
-- Industrial and IOT communications.
+- Water treatment
+- Crushing, conveying, milling
+- Autoclaves
+- Gold processing
 
-### Industrial Experience
+**Software Skills**
 
-I’ve worked in and around industrial sites for most of my career.
+- Frontend / Backend
+- Javascript / React
+- SQL, InfluxDB, Firebase
 
-- Foxboro DCS service, engineering and sales
-- Technical sales of control and fluid transfer equipment
-- Extensive commissioning experience in mining, water and power industries.
-- Ability to adapt to most PLC / HMI / DCS platforms.
-- Electrical and Instrumentation understanding and experience from products to field commissioning.
-- Ability to communicate effectively with field teams and customers.
-- Methodical fault finding and rectification expertise.
+**Other Interests**
 
-### Software Engineer Experience
-
-I have experience with the following technologies.
-
-- Javascript, React, NodeJs and other frontend/backend platforms
-- Databases such as InFluxDB, Firebase, MongoDB and SQL variants
-- Python
-- Docker
-- MQTT, AMQP
-- Modbus
-- LoraWAN
-- Git
-- SSH, NTP and other applicable services
-
-### Other Skills
-
-- Studied electrotechnology, telecommunications. electronic engineering, internetworking and several vendor specific courses.
-- Safety - In an industrial environment workplace safety is particularly important, from risk reviews to safe work practices.
-- Mechanical - industrial and automotive mechanical understanding.
-- Electrical Drafting & Design - schematics to general arrangement and in between.
-- IT - fluent with Mac, Windows, Linux.
-- White Card
-- Confined Space Advanced Worker
-- Low Voltage Rescue & CPR
-
-### Personal Interests
-
-- BMX racing
-- Mountain biking
-- Performance cars and 4WD’s
+- BMX Racing
+- Mountain Biking
+- Performance cars & 4WD
 
 ---
 
 ## Employment History
 
-### Process Control Specialist - Newcrest Mining Limited Lihir (PNG)
+### Process Control Specialist - Projects and Engineering
 
-Current <- December 2018 (4+ years)
-[www.newcrest.com.au](http://www.newcrest.com.au)
+**Newmont (Newcrest) - Lihir Island, Papua New Guinea**
+2018 - Current
+
+[www.newcrest.com/our-assets/lihir](https://www.newcrest.com/our-assets/lihir)
+
+[operations.newmont.com/papua-new-guinea/lihir](https://operations.newmont.com/papua-new-guinea/lihir)
 
 As a part of the Projects and Engineering department at Newcrest's Lihir Gold operation I am involved in all stages of project design and implementation from concept to commissioning.
 
-The Projects and Engineering department with business partners, Worley and Monadelphous, are responsible for the concept development, engineering, construction and commissioning of small and large upgrade projects at Lihir’s gold processing plant.
-
-While predominantly site based on a 22/20 roster, during COVID restrictions I was working from home for approximately 18 months.
-
-The processing plant is controlled by Foxboro (Schneider) DCS system with a number of subsystems controlled by PLCs, mostly Allen Bradley ControlLogix and SLC.
+The Projects and Engineering department with business partners, Worley and Monadelphous, are responsible for the concept development, engineering, construction and commissioning of small and large upgrade projects within the gold processing plant.
 
 As an integral part of both the engineering and construction teams I am responsible for:
 
@@ -115,88 +84,102 @@ As an integral part of both the engineering and construction teams I am responsi
 - Training and guidance to expatriate and PNG national colleagues.
 - Development of standards and templates for engineering documents and practices, network design and control system implementation.
 
-### Operations Manager - Control Direction
+### Operations Manager
 
-November 2018 <- April 2013 (5 Years)
+**Control Direction, Melbourne**
+2013-2018
 
-[www.controldirection.com](http://www.controldirection.com/) / [www.informdb.com](http://www.informdb.com/)
+[www.controldirection.com](http://www.controldirection.com/)
 
 As an all rounder in a small industrial automation company I was involved in all aspects including site supervision, software development, system design, hardware building and all other business and safety functions.
 
 Highlights include:
 
-- Design, build and commission control system and electrical integrations including:
-  - Multiple battery system monitoring installations at [Stanwell Power Station](http://www.stanwell.com/energy-assets/our-power-stations/gas/) (Mt Isa)
-  - Two separate plant air service upgrades at [AGL Torrens Island Power Station](https://www.agl.com.au/about-agl/how-we-source-energy/thermal-energy/agl-torrens)
-  - Control room upgrade for [Mobil Birkenhead](http://www.exxonmobil.com.au/en-au/energy/oil/oil-operations/fuel-terminals) fuel terminal
-  - Pump station MCC for [Air Liquide](https://www.airliquide.com/media/australia-air-liquide-inaugurates-new-co2-capture-plant-supply-gas-preserve-fresh-food).
-  - Physical upgrade of control system IO for [AGL](https://www.agl.com.au/about-agl/how-we-source-energy/thermal-energy/agl-torrens) water demineralisation plant
-  - Integration of tank level measurement using radar technology into overfill protection systems at [Mobil Birkenhead](http://www.exxonmobil.com.au/en-au/energy/oil/oil-operations/fuel-terminals)
-  - Integrated hardware builds and installation for InformDB systems detailed below.
-- Creation of data collection and analysis software stack [InformDB](http://www.informdb.com/) currently deployed at:
-  - [Zoetis Pharmaceutical](https://www.zoetis.com.au/), monitoring and alarming on conditions in clean room facility.
-  - [Citic Pacific Mining](http://www.citicpacificmining.com/our-operation/sino-iron-project/) (WA), gas turbine emission measurement and reporting.
-  - [Exxon Longford](http://www.exxonmobil.com.au/en-au/energy/oil/oil-operations/longford-plants) - oil and gas processing emission measurement and reporting.
-  - Wind Farm system monitoring and integration of market data (Yet to be commissioned).
-  - Several test systems currently in operation including:
-    - Electrical consumption in a large manufacturing facility with 6 x power meters.
-    - Tracking of manhole cover opening using [LoraWAN](https://www.lora-alliance.org/what-is-lora) network communications.
-- Site commissioning and management:
-  - Return water plant to service at [Stanwell Power Station](http://www.stanwell.com/energy-assets/our-power-stations/gas/) (Mt Isa), working with mechanical and electrical contractors to meet customer targets.
-  - Return to service assistance and testing of Gas/HRSG turbines at [Stanwell Power Station](http://www.stanwell.com/energy-assets/our-power-stations/gas/) (Mt Isa).
-  - Repeat engineering / control system assistance at [Newcrest Mining](http://www.newcrest.com.au/our-business/operations/lihir/) (Lihir Island PNG).
-  - Control System support at [MMG Century](http://www.mmg.com/en/Our-Operations/Historical-Operations/Century.aspx) (Lawn Hill / Kurumba QLD).
-  - Control System support at Mobil Birkenhead (SA) fuel terminal.
+Design, build and commission control system and electrical integrations including:
 
-### Commissioning Engineer - Control Direction
+- Multiple battery system monitoring installations at Mica Creek Power Station (Mt Isa)
+- Plant air service upgrades at AGL Torrens Island Power Station (SA)
+- Control room upgrade for Mobil Birkenhead fuel terminal (SA)
+- Pump station MCC for Air Liquide (SA)
+- Upgrade of PLC for AGL water demineralisation plant
+- Integration of tank level measurement using radar technology into overfill protection systems at Mobil Birkenhead
 
-April 2013 <- March 2012 (~1 Year)
+Creation of data collection and analysis software stack InformDB currently deployed at:
 
-[www.controldirection.com](http://www.controldirection.com/)
+- Zoetis Pharmaceutical, monitoring and alarming on conditions in clean room facility.
+- Citic Pacific Mining (WA), gas turbine emission measurement and reporting.
+- Exxon Longford - oil and gas processing emission measurement and reporting.
+- Wind Farm system monitoring and integration of market data (Yet to be commissioned).
+- Electrical consumption in a large manufacturing facility
+- Tracking of manhole covers using LoraWAN protocol
 
-Deployed to [Newcrest Mining](http://www.newcrest.com.au/), [Lihir Island PNG](https://www.google.com.au/search?q=lihir+island+png)
+Site commissioning and management:
 
-- Programming and commissioning of automation systems for Million Ounce Production Upgrade (MOPU) project.
+- Return water plant to service at Mica Creek Power Station (Mt Isa), working with mechanical and electrical contractors to meet customer targets.
+- Return to service assistance and testing of Gas/HRSG turbines at Mica Creek Power Station (Mt Isa).
+- Repeat engineering / control system assistance at Newcrest Mining (Lihir Island PNG).
+- Control System support at Century Zinc Mine (Lawn Hill / Kurumba QLD).
+
+### Commissioning Specialist
+
+**Control Direction for Newcrest Mining Papua New Guinea**
+2012-2013
+
+Deployed to Newcrest Mining - Lihir Island PNG to commission several plant area upgrades as part of the Million Ounce Production Upgrade project.
+
+- Programming and commissioning of automation systems/
 - Pressure Oxidation Autoclave, SAG & Ball Mills, Flotation Circuit, Lime Slaker Plant.
 - Foxboro DCS system and vendor supplied PLC’s.
 - Maintaining strict deadlines while managing programming and testing of complete automation systems and integrating into existing systems.
 
-### Marketing Manager - Horsepower Factory / HPF Group
+### Marketing Manager
 
-November 2011 <- December 2007 (~4 Years)
+**Horsepower Factory / HPF Group, Melbourne**
+2007-2012
 
 [www.hp-f.com.au](http://www.hp-f.com.au/)
 
-- Design, development and maintenance of 5 high traffic websites (all still running and generating business 6 years later).
-- Production of community TV show [Oz Garage](http://www.ozgarage.com.au/) (regularly most watched program on Victorian community TV, broadcast in several other states).
+Taking a break from the industrial automation industry I combined by technical and social skills with my passion for performance cars.
+
+- Design, development and maintenance of 5 high traffic websites (some continued in current state for 10y+).
+- Production of community TV show Oz Garage (regularly most watched program on Victorian community TV, broadcast in several other states).
 - Marketing budget management and event planning.
 - Press release generation
 - Management of high profile car builds and releases.
 
-### Scada Sales Manager / Proposals Engineer - Invensys (now Schneider)
+### SCADA Sales Manager / Proposals Engineer
 
-2010 <- 2007
+**Invensys / Foxboro (new Schneider)**
+2005-2007
+
+I returned to the Foxboro business to provide technical support for large scale DCS proposals and manage sales for SCADA customers.
 
 - Account management
 - Proposal generation of both small and multi million dollar systems
-- Management of annual user group conferences
+- Management of annual user group conferences for entire portfolio of systems.
 - Working with Foxboro DCS and RTU’s, Wonderware and instrumentation.
 
-### Sales Engineer - Diamond Key International
+### Sales Engineer
 
-2007 <- 2005
+**Diamond Key International, Melbourne**
+2003-2005
 
 [www.diamondkey.com](http://www.diamondkey.com/)
 
-- Petroleum truck loading systems
+Diamond Key specialised in truck loading and custody transfer system throughout Australia.
+
+- Design of petroleum truck loading systems
 - Proposal generation
 - Account management
 - Development of internal pricing systems
 - Interaction with National Measurement Institute (NMI) for product approvals
 
-### Project Engineer / Internal Sales - Invensys / Foxboro Australia (now Schneider)
+### Project Engineer / Internal Sales
 
-2005 <- 2000
+**Foxboro Australia (now Schneider)**
+1998-2003
+
+Moved through several roles within the organisation from assembly of large DCS systems through to account management and internal sales.
 
 - Predominantly working with the Foxboro I/A Series DCS
 - Minor project engineering and commissioning on site throughout Australia
